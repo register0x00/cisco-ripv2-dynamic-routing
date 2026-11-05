@@ -6,7 +6,7 @@ A multi-router Wide Area Network (WAN) simulation designed and configured in **C
 <img width="1920" height="1009" alt="2026-11-05_19-24-30" src="https://github.com/user-attachments/assets/43c227cb-8d83-4b99-a75e-9c9514334b38" />
 
 ### ⚙️ Technical Details & Infrastructure:
-* **Multi-Router Chain:** Configured 3 **Router-PT** nodes simulating a path from a local SOHO infrastructure through an ISP backbone to a remote Web Server.
+* **Multi-Router Chain:** Configured 3 **Router-2901** nodes simulating a path from a local SOHO infrastructure through an ISP backbone to a remote Web Server.
 * **Dynamic Route Propagation:** Used **RIP version 2** to automatically build and update routing tables across all nodes without using static routes.
 * **Separated Network Zones:**
   * Private LAN (Home): `192.168.1.0/24`
