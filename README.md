@@ -25,3 +25,43 @@ A multi-router Wide Area Network (WAN) simulation designed and configured in **C
 3. Open the CLI on any router and type `show ip route` to analyze the dynamic routing table (look for the **R** marker).
 4. Run a ping from `PC0` (Home) to `192.168.2.2` (Server) to test automated convergence.
 
+## ⌨️ CLI Configuration Scripts
+
+To replicate the dynamic routing behavior, apply the following configuration scripts to the respective routers via the Cisco CLI:
+
+### Router1 (Home Gateway)
+```text
+enable
+configure terminal
+router rip
+version 2
+network 192.168.1.0
+network 10.0.0.0
+end
+write
+```
+
+### Router2 (ISP Backbone)
+```text
+enable
+configure terminal
+router rip
+version 2
+network 10.0.0.0
+network 20.0.0.0
+end
+write
+```
+
+### Router3 (Server Gateway)
+```text
+enable
+configure terminal
+router rip
+version 2
+network 20.0.0.0
+network 192.168.2.0
+end
+write
+```
+
